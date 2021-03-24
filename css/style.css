@@ -1,3 +1,12 @@
-/* html {
-    background: lightblue;
-} */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+
+body{
+    background-image: url("../images/image-01.png");
+    background-size: cover;
+    width: 100%;
+    }
