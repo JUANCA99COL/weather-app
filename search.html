@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/search.css">
+    <a class="d-none" href="https://icons8.com/icon/5xG5QSwiae0d/forward">Forward icon by Icons8</a>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+</head>
+<body class="">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="p-4">
+          
+            <ul class="myList text-light">
+                <li><a href="home.html"></a>Home</li>
+                <li><a href="weather.html"></a>Weather</li>
+                <li><a href="search.html"></a>search</li>
+            </ul>
+         
+        </div>
+      </div>
+      <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+   <input class="mt-5" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for your city.." title="Type in a city">
+   <!-- <button class="searchbtn btn btn-primary">Search</button> -->
+   <a class="searchbtn"><h4>Submit</h4></a>
+   <br><br><br><br>
+
+   <ul class="results mt-5" id="myUL">
+         <li class="p-2 ">
+            <a class="" href="#">Wellington</a>
+            <img class="float-end" src="https://img.icons8.com/pastel-glyph/34/000000/forward.png"/>
+        </li>
+         <li class="p-2 ">
+            <a class="" href="#">Auckland</a>
+            <img class="float-end" src="https://img.icons8.com/pastel-glyph/34/000000/forward.png"/>
+        </li>
+        <li class="p-2 ">
+                <a class="" href="#">Christchurch</a>
+                <img class="float-end" src="https://img.icons8.com/pastel-glyph/34/000000/forward.png"/>
+        </li>
+        <li class="p-2 ">
+            <a class="" href="#">Hamilton</a>
+            <img class="float-end" src="https://img.icons8.com/pastel-glyph/34/000000/forward.png"/>
+        </li>
+        <li class="p-2 ">
+            <a class="" href="#">Tauranga</a>
+            <img class="float-end" src="https://img.icons8.com/pastel-glyph/34/000000/forward.png"/>
+        </li>
+        <li class="p-2 ">
+            <a class="" href="#">Dunedin</a>
+            <img class="float-end" src="https://img.icons8.com/pastel-glyph/34/000000/forward.png"/>
+        </li>
+        <li class="p-2 ">
+            <a class="" href="#">Queenstown</a>
+            <img class="float-end" src="https://img.icons8.com/pastel-glyph/34/000000/forward.png"/>
+        </li>
+   </ul>
+
+   <!-- <div class="text-dark">
+    <a class="float-start" href="#">Wellington</a>
+    <img class="float-end" src="https://img.icons8.com/pastel-glyph/34/000000/forward.png"/> 
+   </div> -->
+   
+   <script>
+   function myFunction() {
+       var input, filter, ul, li, a, i, txtValue;
+       input = document.getElementById("myInput");
+       filter = input.value.toUpperCase();
+       ul = document.getElementById("myUL");
+       li = ul.getElementsByTagName("li");
+       for (i = 0; i < li.length; i++) {
+           a = li[i].getElementsByTagName("a")[0];
+           txtValue = a.textContent || a.innerText;
+           if (txtValue.toUpperCase().indexOf(filter) > -1) {
+               li[i].style.display = "";
+           } else {
+               li[i].style.display = "none";
+           }
+       }
+   }
+   </script>
+
+
+</body>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</html>

@@ -1,3 +1,13 @@
-/* html {
-    background: lightblue;
-} */
+body {
+    background-color: #F7AF9D;
+}
+
+.weather-div {
+    height: 200px;
+}
+
+.myList {
+    list-style: none;
+    cursor: pointer;
+}
+
